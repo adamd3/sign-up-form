@@ -1,23 +1,21 @@
 html, body {
   height: 100%;
   margin: 0;
+  padding: 0;
 }
 
-body {
-  display: flex;
-  flex-direction: row;
+.container {
+  display: grid;
+  grid-template-columns: calc(100% - 60%) auto;
+  height: 100%;
 }
 
 #left {
-  width: 33.33%;
-  background-image: url("images/guacamaya.avif");
-  background-size: cover;
-  min-height: 800px;
-  background-repeat: no-repeat;
-  background-position: center;
+  display: grid;
+  place-items: center;
+  background-color: #624f90;
 }
 
 #right {
-  flex-grow: 1;
-  background-color: #ccc;
+  background-color: #221d2f;
 }
