@@ -4,10 +4,16 @@ html, body {
   padding: 0;
 }
 
+body {
+  overflow: hidden;
+}
+
 .container {
   display: grid;
   grid-template-columns: calc(100% - 60%) auto;
   height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 #left {
@@ -18,4 +24,24 @@ html, body {
 
 #right {
   background-color: #221d2f;
+}
+
+@media (max-width: 700px) {
+  body {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .container {
+    grid-template-rows: 100vh minmax(100vh, auto);
+    grid-template-columns: none;
+    overflow: hidden;
+    height: auto;
+  }
+
+  #left {
+    width: 100%;
+    position: relative;
+  }
+
 }
