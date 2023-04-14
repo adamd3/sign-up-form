@@ -21,22 +21,23 @@
 
 /* left panel */
 
-#left {
+.left {
   display: grid;
   background-color: #624f90;
   text-align: left; 
 }
 
-#left h1 {
-  font-size: min(6vw, 40px); 
+.left h1 {
+  font-size: min(5vw, 30px); 
   padding: 5% 0 0 5%;
 }
 
-#left img {
+.left img {
+  width: 90%;
   margin-top: 0px;
 }
 
-#right {
+.right {
   background-color: #221d2f;
 }
 
@@ -51,7 +52,7 @@
     height: auto;
   }
 
-  #left {
+  .left {
     width: 100%;
     position: relative;
   }
