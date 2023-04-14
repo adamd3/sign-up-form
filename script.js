@@ -1,4 +1,6 @@
 const inputs = document.querySelectorAll('input');
+const submitBtn = document.querySelector('input[type="submit"]');
+
 let password = '';
 
 inputs.forEach(input => {
@@ -7,6 +9,7 @@ inputs.forEach(input => {
       password = input.value;
     } 
     validate(input, password);
+    checkValidity(inputs, submitBtn);
   });
 });
 
@@ -65,4 +68,15 @@ function validate(input, password, confirmPassword) {
     default:
       break;
   }
+}
+
+
+function checkValidity(inputs, submitBtn) {
+  let isValid = true;
+  inputs.forEach(input => {
+    if (input.type !== 'submit' && input.classList.contains('error')) {
+      isValid = false;
+    }
+  });
+  submitBtn.disabled = !isValid;
 }

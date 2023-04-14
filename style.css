@@ -108,8 +108,17 @@ input[type="submit"] {
   transition: background-color 0.3s ease-in-out;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:not(:disabled):hover {
   background-color: #1c3d8d;
+}
+
+input[type="submit"]:disabled:hover {
+  background-color: #341eaf;
+}
+
+input[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: default;
 }
 
 .error-message {
