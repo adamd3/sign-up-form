@@ -143,6 +143,10 @@ input[type="submit"]:disabled {
     height: auto;
   }
 
+  .right {
+    padding: 40px;
+  }
+
   .left {
     width: 100%;
     position: relative;
